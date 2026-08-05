@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio — Minimal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- HTMX CDN -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-neutral-100 selection:text-neutral-900">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/80 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Home Link -->
+            <a hx-get="{% url 'Landings' %}" 
+               hx-target="#main-content" 
+               hx-swap="innerHTML" 
+               hx-push-url="true" 
+               class="font-semibold tracking-tight text-lg text-white hover:opacity-80 transition-opacity cursor-pointer">
+                STUDIO<span class="text-neutral-500">.</span>
+            </a>
+            
+            <!-- SPA Navigation Links -->
+            <nav class="hidden sm:flex items-center gap-8 text-sm text-neutral-400">
+                <a hx-get="{% url 'Services pages' %}" 
+                   hx-target="#main-content" 
+                   hx-swap="innerHTML" 
+                   hx-push-url="true" 
+                   class="hover:text-white transition-colors cursor-pointer">
+                   Services
+                </a>
+
+                <a hx-get="{% url 'Abouts pages' %}" 
+                   hx-target="#main-content" 
+                   hx-swap="innerHTML" 
+                   hx-push-url="true" 
+                   class="hover:text-white transition-colors cursor-pointer">
+                   About
+                </a>
+
+                <a hx-get="{% url 'Contact pages' %}" 
+                   hx-target="#main-content" 
+                   hx-swap="innerHTML" 
+                   hx-push-url="true" 
+                   class="hover:text-white transition-colors cursor-pointer">
+                   Contact
+                </a>
+            </nav>
+
+            <!-- Call to Action Button -->
+            <a hx-get="{% url 'Contact pages' %}" 
+               hx-target="#main-content" 
+               hx-swap="innerHTML" 
+               hx-push-url="true" 
+               class="px-4 py-2 text-xs font-medium uppercase tracking-wider text-neutral-950 bg-white rounded-full hover:bg-neutral-200 transition-all duration-200 active:scale-95 cursor-pointer">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- Target SPA Container -->
+    <main id="main-content" class="min-h-[calc(100vh-5rem)]">
+        {% block content %}
+        <!-- Default page view content loads here -->
+        {% endblock content %}
+    </main>
+
+</body>
+</html>

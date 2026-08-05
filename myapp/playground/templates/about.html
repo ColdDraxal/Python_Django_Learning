@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Minimal Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fade-in entrance animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-neutral-100 selection:text-neutral-900">
+
+    <main>
+        <!-- Hero / Intro Section -->
+        <section class="max-w-6xl mx-auto px-6 pt-24 pb-20 animate-fade-in">
+            <div class="max-w-3xl">
+                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">Who We Are</span>
+                <h1 class="text-4xl sm:text-6xl font-normal tracking-tight text-white mt-4 leading-tight">
+                    We are a small, focused design & engineering studio.
+                </h1>
+                <p class="mt-6 text-lg text-neutral-400 leading-relaxed font-light">
+                    Founded with a belief that less is more. We strip away the unnecessary noise to focus on building digital experiences that excel in clarity, speed, and function.
+                </p>
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 max-w-6xl mx-auto">
+
+        <!-- Stats / Philosophy Section -->
+        <section class="max-w-6xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-neutral-900/30 border border-neutral-800/80 rounded-2xl">
+                    <span class="text-3xl font-light text-white font-mono">01/</span>
+                    <h3 class="text-lg font-medium text-white mt-4 mb-2">Minimal by Choice</h3>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                        We don't add bloat. Every line of code and visual component exists for a dedicated purpose.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-neutral-900/30 border border-neutral-800/80 rounded-2xl">
+                    <span class="text-3xl font-light text-white font-mono">02/</span>
+                    <h3 class="text-lg font-medium text-white mt-4 mb-2">Direct Collaboration</h3>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                        No middle managers. You communicate directly with the designers and engineers building your project.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-neutral-900/30 border border-neutral-800/80 rounded-2xl">
+                    <span class="text-3xl font-light text-white font-mono">03/</span>
+                    <h3 class="text-lg font-medium text-white mt-4 mb-2">Performance First</h3>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                        Speed is a core feature. We optimize every asset and query for instant interactions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="border-t border-neutral-900 py-24 bg-neutral-950">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">Leadership</span>
+                        <h2 class="text-2xl font-medium tracking-tight text-white mt-2">The Team</h2>
+                    </div>
+                    <span class="text-xs font-mono text-neutral-500">[ Core Members ]</span>
+                </div>
+
+                <!-- Team Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    
+                    <!-- Member Card 1 -->
+                    <div class="group relative p-6 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1">
+                        <div class="aspect-square w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden mb-6 flex items-center justify-center text-neutral-600 font-mono text-xs">
+                            <!-- Django Static Image Placeholder -->
+                            <!-- <img src="{% static 'images/alex.jpg' %}" alt="Alex Mercer" class="w-full h-full object-cover"> -->
+                            [ PHOTO ]
+                        </div>
+                        <h3 class="text-lg font-medium text-white group-hover:text-neutral-200 transition-colors">Alex Mercer</h3>
+                        <p class="text-xs font-mono text-neutral-500 mt-0.5">Design Director</p>
+                        <p class="text-sm text-neutral-400 font-light mt-3">
+                            Focusing on visual architecture, typography, and clean design systems.
+                        </p>
+                    </div>
+
+                    <!-- Member Card 2 -->
+                    <div class="group relative p-6 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1">
+                        <div class="aspect-square w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden mb-6 flex items-center justify-center text-neutral-600 font-mono text-xs">
+                            [ PHOTO ]
+                        </div>
+                        <h3 class="text-lg font-medium text-white group-hover:text-neutral-200 transition-colors">Elena Rostova</h3>
+                        <p class="text-xs font-mono text-neutral-500 mt-0.5">Lead Engineer</p>
+                        <p class="text-sm text-neutral-400 font-light mt-3">
+                            Specializing in distributed systems, Django backend architecture, and Next.js.
+                        </p>
+                    </div>
+
+                    <!-- Member Card 3 -->
+                    <div class="group relative p-6 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1">
+                        <div class="aspect-square w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden mb-6 flex items-center justify-center text-neutral-600 font-mono text-xs">
+                            [ PHOTO ]
+                        </div>
+                        <h3 class="text-lg font-medium text-white group-hover:text-neutral-200 transition-colors">David Chen</h3>
+                        <p class="text-xs font-mono text-neutral-500 mt-0.5">Product Strategist</p>
+                        <p class="text-sm text-neutral-400 font-light mt-3">
+                            Translating complex business needs into streamlined digital workflows.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="border-t border-neutral-900 py-24">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-3xl sm:text-5xl font-medium tracking-tight text-white max-w-2xl mx-auto">
+                    Want to work together on your next project?
+                </h2>
+                <div class="mt-10 flex items-center justify-center">
+                    <a href="/contact/" class="px-8 py-3 bg-white text-neutral-950 font-medium text-sm rounded-full hover:bg-neutral-200 transition-all duration-200 active:scale-95">
+                        Start a Conversation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-900 py-8 text-neutral-600 text-xs font-mono">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; {% now "Y" %} Studio Inc. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-neutral-400 transition-colors">Twitter</a>
+                <a href="#" class="hover:text-neutral-400 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

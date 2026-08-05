@@ -1,0 +1,1 @@
+document.write("<h1> Script is working </h1>")

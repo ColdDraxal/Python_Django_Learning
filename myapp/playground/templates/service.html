@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Minimal Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Keyframe Animations for Smooth Entrance Effects */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-neutral-100 selection:text-neutral-900">
+    <main>
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-6 pt-24 pb-20 animate-fade-in">
+            <div class="max-w-3xl">
+                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">Capabilities</span>
+                <h1 class="text-4xl sm:text-6xl font-normal tracking-tight text-white mt-4 leading-tight">
+                    We design and build digital products with focus and clarity.
+                </h1>
+                <p class="mt-6 text-lg text-neutral-400 leading-relaxed font-light">
+                    Our modular approach allows us to deliver high-performance design, brand systems, and engineering tailored to your team's exact requirements.
+                </p>
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 max-w-6xl mx-auto">
+
+        <!-- Services Grid Section -->
+        <section id="services" class="max-w-6xl mx-auto px-6 py-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-2xl font-medium tracking-tight text-white">What We Offer</h2>
+                    <p class="text-sm text-neutral-400 mt-1">Four core pillars of execution.</p>
+                </div>
+                <span class="text-xs font-mono text-neutral-500">[ 01 — 04 ]</span>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Service Card 1 -->
+                <div class="group relative p-8 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1 hover:bg-neutral-900/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-neutral-500 group-hover:text-neutral-300 transition-colors">01</span>
+                            <!-- Arrow Icon with hover animation -->
+                            <svg class="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-white mt-8 mb-3">Brand Strategy & Identity</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-light">
+                            Crafting distinct visual identities, design systems, and positioning strategies that stand out without being loud.
+                        </p>
+                    </div>
+                    <ul class="mt-8 pt-6 border-t border-neutral-800/60 flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Logos</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Typography</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Brand Books</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group relative p-8 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1 hover:bg-neutral-900/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-neutral-500 group-hover:text-neutral-300 transition-colors">02</span>
+                            <svg class="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-white mt-8 mb-3">UI/UX Interface Design</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-light">
+                            User-centric interface architecture focused on seamless navigation, structural efficiency, and refined aesthetics.
+                        </p>
+                    </div>
+                    <ul class="mt-8 pt-6 border-t border-neutral-800/60 flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Wireframing</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Prototyping</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Design Systems</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group relative p-8 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1 hover:bg-neutral-900/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-neutral-500 group-hover:text-neutral-300 transition-colors">03</span>
+                            <svg class="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-white mt-8 mb-3">Frontend Development</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-light">
+                            Clean, accessible code using Next.js, React, and Tailwind CSS to construct fast, responsive web interfaces.
+                        </p>
+                    </div>
+                    <ul class="mt-8 pt-6 border-t border-neutral-800/60 flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">React</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Tailwind</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Performance</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group relative p-8 bg-neutral-900/40 border border-neutral-800/80 rounded-2xl transition-all duration-300 hover:border-neutral-500 hover:-translate-y-1 hover:bg-neutral-900/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-neutral-500 group-hover:text-neutral-300 transition-colors">04</span>
+                            <svg class="w-5 h-5 text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-white mt-8 mb-3">Technical Direction</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-light">
+                            Helping teams optimize web infrastructure, select optimal technical stacks, and establish clear engineering standards.
+                        </p>
+                    </div>
+                    <ul class="mt-8 pt-6 border-t border-neutral-800/60 flex flex-wrap gap-2 text-xs font-mono text-neutral-400">
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Audit</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Architecture</li>
+                        <li class="px-2.5 py-1 bg-neutral-950 border border-neutral-800 rounded-md">Strategy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="border-t border-neutral-900 py-24 bg-neutral-950">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16">
+                    <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">Workflow</span>
+                    <h2 class="text-2xl font-medium tracking-tight text-white mt-2">Our Process</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 border-l border-neutral-800 hover:border-white transition-colors duration-300">
+                        <span class="text-xs font-mono text-neutral-500">PHASE 01</span>
+                        <h3 class="text-lg font-medium text-white mt-2 mb-2">Discovery</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            We analyze your goals, align expectations, and lay down clear project specs before touching design software.
+                        </p>
+                    </div>
+
+                    <div class="p-6 border-l border-neutral-800 hover:border-white transition-colors duration-300">
+                        <span class="text-xs font-mono text-neutral-500">PHASE 02</span>
+                        <h3 class="text-lg font-medium text-white mt-2 mb-2">Build</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            Iterative design and production sprints with weekly updates to keep feedback loops tight and transparent.
+                        </p>
+                    </div>
+
+                    <div class="p-6 border-l border-neutral-800 hover:border-white transition-colors duration-300">
+                        <span class="text-xs font-mono text-neutral-500">PHASE 03</span>
+                        <h3 class="text-lg font-medium text-white mt-2 mb-2">Delivery</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            Thorough testing, optimization, asset handoffs, and ongoing documentation so your team can scale easily.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="contact" class="border-t border-neutral-900 py-24">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-3xl sm:text-5xl font-medium tracking-tight text-white max-w-2xl mx-auto">
+                    Have a project in mind? Let's talk.
+                </h2>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:hello@example.com" class="w-full sm:w-auto px-8 py-3 bg-white text-neutral-950 font-medium text-sm rounded-full hover:bg-neutral-200 transition-all duration-200 active:scale-95">
+                        Send an Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="border-t border-neutral-900 py-8 text-neutral-600 text-xs font-mono">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Studio Inc. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-neutral-400 transition-colors">Twitter</a>
+                <a href="#" class="hover:text-neutral-400 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-neutral-400 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
