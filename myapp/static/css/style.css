@@ -1,9 +1,121 @@
-body{
-    background-color: maroon;
-    color: white;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Cards container */
+
+.training-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* Card */
+
+.training-card {
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+
+    padding: 24px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Hover */
+
+.training-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cfcfcf;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Card header */
+
+.card-top {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex:column;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.card-top h2 {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #111;
+}
+
+
+/* Duration */
+
+.duration {
+    color: #888;
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.duration span {
+    color: #111;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* Training name */
+
+.training {
+    margin: 18px 0 14px;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.training-card article {
+    padding-top: 14px;
+
+    border-top: 1px solid #eee;
+}
+
+.training-card article p {
+    margin: 0;
+
+    color: #707070;
+
+    font-size: 14px;
+    line-height: 1.65;
 }

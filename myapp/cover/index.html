@@ -9,8 +9,33 @@
 </head>
 <body>
     <h1> Style is working  properly....</h1>
-    <img src="{% static 'img/whitebeard.jpg' %}" height="400" width="'400" alt ="Spider man">
-    
-    <script src="{% static 'js/script.js' %}"></script>
+    <img src="{% static 'img/whitebeard.jpg' %}" height="400" width="400" alt ="Spider man">
+    {% for sport in sports %}
+    <div class="training-container">
+
+        <section class="training-card">
+
+            <div class="card-top">
+                <h2>{{sport.name}}</h2>
+
+                <div class="duration">
+                    <span>{{sport.playtime}}</span>
+                </div>
+            </div>
+
+            <p class="training">
+                {{sport.training}}
+            </p>
+
+            <article>
+                <p>
+                    {{sport.description}}
+                </p>
+            </article>
+
+        </section>
+
+    </div>
+    {% endfor %}
 </body>
 </html>

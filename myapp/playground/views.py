@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from sport.models import Sport
 # Create your views here.
 
 def Home(request):
@@ -43,4 +44,9 @@ def Files(request,file_path):
     return HttpResponse(f'<h1>File Path is : {file_path}</h1>')
 
 def Index(request):
-    return render(request,'index.html')
+    sport = Sport.objects.all()  #get all the data from the Sport model
+    context = {
+        'sports':sport
+    }
+    print(sport)
+    return render(request,'index.html', context)
