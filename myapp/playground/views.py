@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from sport.models import Sport
+from .models import Contact
 # Create your views here.
 
 def Home(request):
@@ -15,7 +16,23 @@ def About(request):
 def Service(request):
     return render(request, 'service.html')
 
-def Contact(request):
+def contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        contact = request.POST.get('contact')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        Contact.objects.create(
+            name = name,
+            email = email,
+            contact = contact,
+            subject = subject,
+            message = message
+        )
+
+        return redirect('contact')
     return render(request, 'contact.html')
 
 def StudentbyId(request,id):
